@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_app/content_page.dart';
 import 'package:get/get.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -55,7 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(height: 40),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width - 25,
+                  width: MediaQuery.of(context).size.width - 25 < 0
+                      ? 0
+                      : MediaQuery.of(context).size.width - 25,
                   child: Text(
                     'We make great design work happen with our great community designer',
                     style: TextStyle(color: Colors.white60, fontSize: 16),

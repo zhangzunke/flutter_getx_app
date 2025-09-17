@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: '/',
+      home: const MyHomePage(),
       getPages: [
         GetPage(name: '/', page: () => const MyHomePage()),
         GetPage(name: '/content', page: () => const ContentPage()),
